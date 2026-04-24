@@ -1,5 +1,13 @@
+<div align="center">
+
 # Heading-Aware-CBF-MPPI
 Paper : CBF-Critic-Based Heading-Aware MPPI Navigation for Omnidirectional Mobile Robots
+
+</div>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=3b4350&height=3&section=header"/>
+</p>
 
 ## MPPI Parameters
 | Category         | Parameter                      | Symbol                      | Sim. Value | Real Value | Unit  |
