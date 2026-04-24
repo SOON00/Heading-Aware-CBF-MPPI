@@ -42,6 +42,3 @@ Paper : CBF-Critic-Based Heading-Aware MPPI Navigation for Omnidirectional Mobil
 ### Real Robot Platform
 - Step Motor
 - In-wheel Motor
-
-
-~ing
