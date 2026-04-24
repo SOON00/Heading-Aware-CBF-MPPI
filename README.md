@@ -1,26 +1,7 @@
 <div align="center">
 
 # Heading-Aware-CBF-MPPI
-**CBF-Critic-Based Heading-Aware MPPI Navigation for Omnidirectional Mobile Robots**
 
-![Case2](./images/case2.gif)
-
-![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?=plastic&logo=ubuntu&logoColor=white)
-![ROS2](https://img.shields.io/badge/ROS2-Humble-22314E?=plastic&logo=ros&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.10-3776AB?=plastic&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C++-17-00599C?=plastic&logo=cplusplus&logoColor=white)
-<br>
-
-[![IEEE](https://img.shields.io/badge/IEEE-Paper-00629B?=plastic&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/)
-[![Video](https://img.shields.io/badge/Video-YouTube-ff0000?=plastic&logo=youtube&logoColor=white)](https://youtube.com/yourvideo)
-[![Code](https://img.shields.io/badge/Code-GitHub-24292e?style=flat-square&logo=github)](https://github.com/yourname/yourrepo)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
-
-</div>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=3b4350&height=3&section=header"/>
-</p>
 
 ## MPPI Parameters
 | Category         | Parameter                      | Symbol                      | Sim. Value | Real Value | Unit  |
