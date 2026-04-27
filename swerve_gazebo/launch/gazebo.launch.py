@@ -103,12 +103,15 @@ def generate_launch_description():
     gazebo_pkg = get_package_share_directory('swerve_gazebo')
 
     existing_model_path = os.environ.get('GAZEBO_MODEL_PATH', '')
+    gazebo_models_path = os.path.join(gazebo_pkg, 'models')
+
     set_gazebo_model_path = SetEnvironmentVariable(
         name='GAZEBO_MODEL_PATH',
         value=[
-            os.path.dirname(gazebo_pkg),
-            ':' + existing_model_path if existing_model_path else ''
-        ]
+            gazebo_models_path,
+            os.pathsep,
+            existing_model_path
+        ] if existing_model_path else gazebo_models_path
     )
     
     gazebo = OpaqueFunction(function=_find_world_path)
