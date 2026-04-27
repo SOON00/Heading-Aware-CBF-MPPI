@@ -23,7 +23,7 @@
 ## 📦 Package Overview
 
 | Package | Description |
-| ------- | ----------- |
+| :------- | :----------- |
 | [`swerve_bringup`](./swerve_bringup) | Integrated launch package for running complete case-based simulation setups. |
 | [`swerve_cartographer`](./swerve_cartographer) | Cartographer-based SLAM and map management package. |
 | [`swerve_controller`](./swerve_controller) | Swerve-drive kinematics, wheel control, and odometry package. |
@@ -254,7 +254,7 @@ ros2 run nav2_map_server map_saver_cli -f <map_name>
 ## Hardware Information
 
 | Component | Specification |
-| --------- | ------------- |
+| :--------- | :------------- |
 | Mobile Base | 4-wheel swerve drive |
 | Steering Motor | 4 × stepper motors |
 | Drive Motor | 4 × in-wheel motors |
