@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- CHASSIS -->
+
+    <gazebo reference="chassis_link">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <!-- FRONT_LEFT_WHEEL -->
+
+    <gazebo reference="front_left_wheel_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="200.0"/>
+        <mu2 value="100.0"/>
+        <kp>450000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <!-- FRONT_RIGHT_WHEEL -->
+
+    <gazebo reference="front_right_wheel_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="200.0"/>
+        <mu2 value="100.0"/>
+        <kp>450000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <!-- REAR_LEFT_WHEEL -->
+
+    <gazebo reference="rear_left_wheel_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="200.0"/>
+        <mu2 value="100.0"/>
+        <kp>450000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <!-- REAR_RIGHT_WHEEL -->
+
+    <gazebo reference="rear_right_wheel_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="200.0"/>
+        <mu2 value="100.0"/>
+        <kp>450000.0</kp>
+        <kd>1.0</kd>
+    </gazebo>
+
+    <!-- FRONT_LEFT_STEER -->
+
+    <gazebo reference="front_left_steer_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+
+    <!-- FRONT_RIGHT_STEER -->
+
+    <gazebo reference="front_right_steer_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+
+    <!-- REAR_LEFT_STEER -->
+
+    <gazebo reference="rear_left_steer_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+
+    <!-- REAR_RIGHT_STEER -->
+
+    <gazebo reference="rear_right_steer_link">
+        <material>Gazebo/Gray</material>
+        <mu1 value="0.5"/>
+        <mu2 value="0.5"/>
+    </gazebo>
+
+</robot>

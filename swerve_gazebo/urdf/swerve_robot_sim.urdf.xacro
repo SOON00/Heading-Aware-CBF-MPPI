@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <xacro:include filename="$(find swerve_description)/urdf/swerve_core.xacro"/>
+    <xacro:include filename="gazebo_physics_swerve.xacro"/>
+    <xacro:include filename="$(find swerve_description)/urdf/swerve_imu.xacro"/>
+    <xacro:include filename="$(find swerve_description)/urdf/swerve_2d_lidar.xacro"/>
+    <xacro:include filename="gazebo_sensors.xacro"/>
+    <xacro:include filename="gazebo_control_swerve.xacro"/>
+
+</robot>

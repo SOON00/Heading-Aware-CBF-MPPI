@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="SwerveControl" type="system">
+
+        <!-- Swerve steering joints -->
+
+        <joint name="front_left_steer_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="front_right_steer_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="rear_left_steer_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="rear_right_steer_joint">
+            <command_interface name="position">
+                <param name="min">-100</param>
+                <param name="max">100</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+
+        <!-- Swerve wheel joints -->
+
+        <joint name="front_left_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min">-2.5</param>
+                <param name="max">2.5</param>
+            </command_interface>
+            <state_interface name="velocity">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="front_right_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min">-2.5</param>
+                <param name="max">2.5</param>
+            </command_interface>
+            <state_interface name="velocity">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="rear_left_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min">-2.5</param>
+                <param name="max">2.5</param>
+            </command_interface>
+            <state_interface name="velocity">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="rear_right_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min">-2.5</param>
+                <param name="max">2.5</param>
+            </command_interface>
+            <state_interface name="velocity">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <!-- Right arm joints -->
+
+        <joint name="right_link1_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="right_link2_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="right_link3_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="right_link4_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="right_link5_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="right_link6_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="right_link7_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+
+        <!-- Left arm joints -->
+
+        <joint name="left_link1_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="left_link2_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="left_link3_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="left_link4_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="left_link5_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="left_link6_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+        <joint name="left_link7_joint">
+            <command_interface name="position">
+                <param name="min">-3.14159</param>
+                <param name="max">3.14159</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+
+    </ros2_control>
+
+</robot>

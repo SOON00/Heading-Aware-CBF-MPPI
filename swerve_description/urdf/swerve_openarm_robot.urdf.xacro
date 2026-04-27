@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <xacro:include filename="swerve_core.xacro"/>
+    <xacro:include filename="swerve_imu.xacro"/>
+    <xacro:include filename="swerve_openarm_2d_lidar.xacro"/>
+    <xacro:include filename="openarm_body.xacro"/>
+    <xacro:include filename="openarm_arm.xacro"/>
+    <xacro:include filename="openarm_ee.xacro"/>
+    <xacro:include filename="ros2_control_swerve_openarm.xacro"/>
+
+</robot>
