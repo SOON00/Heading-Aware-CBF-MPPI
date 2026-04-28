@@ -122,7 +122,7 @@ source ~/.bashrc
 |---|---|
 | ![Swerve Drive](./images/swerve_drive_urdf.png) | ![Swerve Drive with Open Arm](./images/swerve_drive_with_open_arm_urdf.png) |
 
-### Gazebo Worlds
+<!-- ### Gazebo Worlds
 Case Study 1:
 <table>
   <tr>
@@ -145,7 +145,21 @@ Case Study 2:
       <img src="./images/case2_gazebo_world_top.png" width="100%"/>
     </td>
   </tr>
-</table>
+</table> -->
+
+### Gazebo Worlds
+
+**Case Study 1:**
+
+| World View | Top View |
+| :---: | :---: |
+| ![Case 1 View](./images/case1_gazebo_world_view.png) | ![Case 1 Top View](./images/case1_gazebo_world_top.png) |
+
+**Case Study 2:**
+
+| World View | Top View |
+| :---: | :---: |
+| ![Case 2 View](./images/case2_gazebo_world_view.png) | ![Case 2 Top View](./images/case2_gazebo_world_top.png) |
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=rect&color=3b4350&height=3&section=header"/>
