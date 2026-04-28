@@ -275,3 +275,27 @@ ros2 run nav2_map_server map_saver_cli -f <map_name>
 | LiDAR | 2D LiDAR |
 | IMU | 9-axis IMU |
 | Communication | CAN / USB |
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=3b4350&height=3&section=header"/>
+</p>
+
+## MPPI Parameters
+| Category         | Parameter                      | Symbol                      | Sim. Value | Real Value | Unit  |
+| ---------------- | ------------------------------ | --------------------------- | ---------- | ---------- | ----- |
+| MPPI Core        | Number of samples (Batch size) | $K$                         | 300        | 800        | -     |
+| MPPI Core        | Prediction horizon             | $N$                         | 40         | 30         | steps |
+| MPPI Core        | Time step interval             | $\Delta t$                  | 0.05       | 0.05       | s     |
+| Sampling Noise   | Linear velocity noise std.     | $\sigma_x,\ \sigma_y$       | 0.2        | 0.4        | m/s   |
+| Sampling Noise   | Angular velocity noise std.    | $\sigma_\theta$             | 0.1        | 0.7        | rad/s |
+| Kinematic Limits | Max linear velocity            | $v_{x,\max},\ v_{y,\max}$   | 0.5        | 0.3        | m/s   |
+| Kinematic Limits | Max angular velocity           | $\omega_{\max}$             | 0.3        | 0.3        | rad/s |
+| Critic Weights   | Goal distance cost weight      | $w_{\mathrm{goal}}$         | 5          | 5          | -     |
+| Critic Weights   | Goal angle cost weight         | $w_{\mathrm{goal\ angle}}$  | 3          | 3          | -     |
+| Critic Weights   | Path follow cost weight        | $w_{\mathrm{path}}$         | 5          | 5          | -     |
+| Critic Weights   | Constraint (Kinematics) cost   | $w_{\mathrm{const}}$        | 4          | 5          | -     |
+| Critic Weights   | CBF safety cost weight         | $w_{\mathrm{cbf}}$          | 5          | 5          | -     |
+| Critic Weights   | Adaptive heading (Path angle)  | $w_{\mathrm{path\ angle}}$  | 2          | 15         | -     |
+| Critic Weights   | Adaptive heading (Lock)        | $w_{\mathrm{lock}}$         | 5          | 8          | -     |
+| Critic Weights   | Fixed region lock weight       | $w_{\mathrm{region\ lock}}$ | 10         | 8          | -     |
+| CBF Settings     | CBF decay rate parameter       | $\alpha$                    | 0.7        | 0.4        | -     |
