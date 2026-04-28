@@ -42,7 +42,7 @@
 ### Prerequisited
 - [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?=plastic&logo=ubuntu&logoColor=white)](https://releases.ubuntu.com/22.04/)
 - [![ROS2](https://img.shields.io/badge/ROS2-Humble-22314E?=plastic&logo=ros&logoColor=white)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
-- ![Python](https://img.shields.io/badge/Python-3.10-3776AB?=plastic&logo=python&logoColor=white)
+- [![Gazebo](https://img.shields.io/badge/Gazebo-Classic%2011-F58113?=plastic&logo=gazebo&logoColor=white)](https://classic.gazebosim.org/)
 
 ### Dependencies
 Nav2:
@@ -56,6 +56,11 @@ Cartographer:
 sudo apt install ros-humble-cartographer ros-humble-cartographer-ros
 ```
 
+Gazebo:
+```bash
+sudo apt install ros-humble-gazebo-ros-pkgs
+```
+
 ### Installation
 
 1. Create a ROS2 workspace and clone this repository:
@@ -65,10 +70,17 @@ mkdir -p ~/swerve_ws/src && cd ~/swerve_ws/src
 git clone https://github.com/SOON00/Heading-Aware-CBF-MPPI.git .
 ```
 
-2. Build the workspace:
-
+2. Install dependencies:
 ```bash
 cd ~/swerve_ws
+sudo apt update
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+3. Build the workspace:
+
+```bash
 colcon build --symlink-install
 ```
 
@@ -80,7 +92,7 @@ colcon build --symlink-install
 colcon build --symlink-install --parallel-workers 1
 ```
 
-3. Source the workspace:
+4. Source the workspace:
 
 ```bash
 source ~/swerve_ws/install/setup.bash
