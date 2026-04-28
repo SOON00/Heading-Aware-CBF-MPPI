@@ -90,10 +90,10 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>1691 580000000</sim_time>
-      <real_time>86 443039147</real_time>
-      <wall_time>1777036416 630989805</wall_time>
-      <iterations>86237</iterations>
+      <sim_time>1771 264000000</sim_time>
+      <real_time>79 893538010</real_time>
+      <wall_time>1777299087 29405694</wall_time>
+      <iterations>79684</iterations>
       <model name='aws_robomaker_warehouse_ClutteringC_01'>
         <pose>1.90918 4.92413 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -354,6 +354,16 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <model name='ground_plane_0'>
+        <pose>-0.298465 -0.327363 0.02 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-0.298465 -0.327363 0.02 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='shipping_container_conveyor_tall_ariac'>
         <pose>0.136705 8.2058 0 0 -0 3.14</pose>
         <scale>1 1 1</scale>
@@ -375,23 +385,13 @@
         </link>
       </model>
       <model name='warehouse_robot'>
-        <pose>5.69396 4.93193 -9e-06 -2e-06 -6e-06 0</pose>
+        <pose>5.69396 4.93193 -9e-06 -3e-06 -7e-06 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>5.69396 4.93193 -9e-06 -2e-06 -6e-06 0</pose>
+          <pose>5.69396 4.93193 -9e-06 -3e-06 -7e-06 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 -0 -0 0 -0 0</acceleration>
-          <wrench>0 -0 -0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='willowgarage'>
-        <pose>-12.8154 -26.2045 0.02 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='walls'>
-          <pose>-12.8154 -26.2045 0.02 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <acceleration>-0 0 0 -0 -0 -0</acceleration>
+          <wrench>-0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -400,7 +400,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>2.61126 3.24902 11.9139 -4e-05 1.5698 1.56917</pose>
+        <pose>2.69328 3.2595 11.9139 -7.4e-05 1.5698 1.56914</pose>
         <view_controller>ortho</view_controller>
         <projection_type>orthographic</projection_type>
       </camera>
@@ -530,43 +530,6 @@
       </link>
       <static>1</static>
       <pose>3.75304 4.9228 0 0 -0 0</pose>
-    </model>
-    <model name='willowgarage'>
-      <static>1</static>
-      <pose>-12.8154 -26.2045 0 0 -0 0</pose>
-      <link name='walls'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://willowgarage/meshes/willowgarage_collision.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://willowgarage/meshes/willowgarage_visual.dae</uri>
-            </mesh>
-          </geometry>
-          <cast_shadows>0</cast_shadows>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
     </model>
     <model name='aws_robomaker_warehouse_ClutteringC_01_1'>
       <link name='link'>
@@ -2206,6 +2169,54 @@
         <kinematic>0</kinematic>
       </link>
       <pose>5.69396 4.93193 0 0 -0 0</pose>
+    </model>
+    <model name='ground_plane_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-0.298465 -0.327363 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
