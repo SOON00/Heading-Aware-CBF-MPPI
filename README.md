@@ -110,11 +110,17 @@ source ~/.bashrc
   <img src="https://capsule-render.vercel.app/api?type=rect&color=3b4350&height=3&section=header"/>
 </p>
 
+<!-- ## ⚙️ Simulation Environment
+### Robot Model Types
+| Swerve Drive | Swerve Drive with Open Arm |
+|---|---|
+| <img src="./images/swerve_drive_urdf.png" width="400"/> | <img src="./images/swerve_drive_with_open_arm_urdf.png" width="400"/> | -->
+
 ## ⚙️ Simulation Environment
 ### Robot Model Types
 | Swerve Drive | Swerve Drive with Open Arm |
 |---|---|
-| <img src="./images/swerve_drive_urdf.png" width="400"/> | <img src="./images/swerve_drive_with_open_arm_urdf.png" width="400"/> |
+| ![Swerve Drive](./images/swerve_drive_urdf.png) | ![Swerve Drive with Open Arm](./images/swerve_drive_with_open_arm_urdf.png) |
 
 ### Gazebo Worlds
 Case Study 1:
